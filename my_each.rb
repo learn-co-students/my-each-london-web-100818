@@ -1,3 +1,10 @@
-def my_each # put argument(s) here
-  # code here
+class Array
+  def my_each
+    idx = 0
+    while idx < length
+      yield self[idx]
+      idx += 1
+    end
+    self
+  end
 end
